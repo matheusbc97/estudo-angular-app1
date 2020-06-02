@@ -8,14 +8,13 @@ import { Coracao } from '../shared/coracao.model'
   styleUrls: ['./tentativas.component.scss']
 })
 export class TentativasComponent implements OnInit, OnChanges {
-  @Input() public tentativas: number 
+  @Input() public tentativas: number
 
   public coracoes: Coracao[] = [
     new Coracao(true), new Coracao(true), new Coracao(true)
   ]
 
-  constructor() { 
-    console.log(this.coracoes)
+  constructor() {
   }
 
   ngOnInit() {
@@ -26,7 +25,6 @@ export class TentativasComponent implements OnInit, OnChanges {
       let indice = this.coracoes.length - this.tentativas;
       this.coracoes[indice - 1].cheio = false;
     }
-    console.log('tentativas no painel: ', this.tentativas)
   }
 
 }

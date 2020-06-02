@@ -6,6 +6,7 @@ import { TopoComponent } from './topo/topo.component';
 import { PainelComponent } from './painel/painel.component';
 import { TentativasComponent } from './tentativas/tentativas.component';
 import { ProgressoComponent } from './progresso/progresso.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ProgressoComponent } from './progresso/progresso.component';
     ProgressoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
